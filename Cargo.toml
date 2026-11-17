@@ -1,0 +1,40 @@
+[package]
+name = "slashbuilder-service-kit"
+version = "0.1.0"
+edition = "2021"
+rust-version = "1.74"
+description = "axum scaffolding, middleware, logging, config, and observability for the SlashBuilder Kit ecosystem"
+repository = "https://github.com/slash-builder/service-kit"
+license = "Apache-2.0"
+readme = "README.md"
+keywords = ["axum", "service", "backend", "middleware", "observability"]
+categories = ["web-programming::http-server", "web-programming"]
+# An allow-list, not an exclude: nothing but the library, the docs and the licence can ship by accident.
+include = ["/src/", "/README.md", "/LICENSE", "/CHANGELOG.md"]
+
+# The library keeps the short name `service_kit` so `use service_kit::{AppBuilder, AppError}` is unchanged for every
+# dependent; only the published package name carries the `slashbuilder-` prefix (`service-kit` on crates.io belongs
+# to an unrelated crate).
+[lib]
+name = "service_kit"
+path = "src/lib.rs"
+
+[dependencies]
+axum = "0.7"
+tower = { version = "0.4", features = ["util", "timeout"] }
+tower-http = { version = "0.5", features = ["trace", "cors", "compression-gzip", "request-id", "timeout"] }
+hyper = "1"
+tokio = { version = "1", features = ["rt-multi-thread", "macros", "signal"] }
+tracing = "0.1"
+tracing-subscriber = { version = "0.3", features = ["env-filter", "json"] }
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+figment = { version = "0.10", features = ["toml", "env"] }
+metrics = "0.23"
+metrics-exporter-prometheus = "0.15"
+thiserror = "1.0"
+
+[dev-dependencies]
+tokio = { version = "1", features = ["full", "test-util"] }
+reqwest = { version = "0.12", features = ["json"], default-features = false }
+pretty_assertions = "1.4"
