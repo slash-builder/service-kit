@@ -4,6 +4,9 @@
 //! ecosystem. Bundles middleware, structured logging, layered config, and
 //! observability so every service starts from the same foundation.
 
+#![cfg_attr(not(test), forbid(unsafe_code))]
+#![deny(missing_docs)]
+
 pub mod app;
 pub mod config;
 pub mod error;

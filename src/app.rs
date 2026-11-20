@@ -82,12 +82,15 @@ impl MakeRequestId for CounterRequestId {
     }
 }
 
+/// Builder for a service's axum [`Router`]: collects the service's own routes, then
+/// [`AppBuilder::build`] adds the standard health routes and the default middleware stack.
 pub struct AppBuilder {
     service_name: String,
     router: Router,
 }
 
 impl AppBuilder {
+    /// Starts a builder for the service called `service_name`, with an empty router.
     pub fn new(service_name: impl Into<String>) -> Self {
         Self {
             service_name: service_name.into(),
@@ -104,6 +107,8 @@ impl AppBuilder {
         Ok(self)
     }
 
+    /// Merges `routes` into the builder's router. May be called more than once; each call
+    /// merges (see axum's `Router::merge` for how overlapping routes are handled).
     pub fn with_routes(mut self, routes: Router) -> Self {
         self.router = self.router.merge(routes);
         self
