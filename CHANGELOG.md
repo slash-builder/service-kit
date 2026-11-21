@@ -8,6 +8,13 @@ adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+## [0.1.1](https://github.com/slash-builder/service-kit/compare/v0.1.0...v0.1.1) - 2026-11-21
+
+### Other
+
+- document the public API; forbid unsafe code outside tests ([#10](https://github.com/slash-builder/service-kit/pull/10))
+- *(deps)* Bump reqwest from 0.12.28 to 0.13.5 ([#3](https://github.com/slash-builder/service-kit/pull/3))
+
 ### Added
 
 - First public release as the `slashbuilder-service-kit` package. The library
