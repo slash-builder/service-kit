@@ -104,7 +104,7 @@ cargo clippy --all-targets --all-features --locked -- -D warnings
 cargo test --locked
 ```
 
-Requires Rust 1.74 or newer (the minimum supported Rust version is checked
+Requires Rust 1.85 or newer (the minimum supported Rust version is checked
 in CI against the committed `Cargo.lock`).
 
 ## Contributing

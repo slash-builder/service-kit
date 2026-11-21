@@ -2,7 +2,7 @@
 name = "slashbuilder-service-kit"
 version = "0.1.0"
 edition = "2021"
-rust-version = "1.74"
+rust-version = "1.85"
 description = "axum scaffolding, middleware, logging, config, and observability for the SlashBuilder Kit ecosystem"
 repository = "https://github.com/slash-builder/service-kit"
 license = "Apache-2.0"

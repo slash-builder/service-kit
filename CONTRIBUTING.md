@@ -36,7 +36,7 @@ cargo fmt --all --check
 cargo clippy --all-targets --all-features --locked -- -D warnings
 ```
 
-Requires Rust 1.74 or newer. No other system dependencies for the Kit itself; services built on it bring their own database and cache dependencies.
+Requires Rust 1.85 or newer. No other system dependencies for the Kit itself; services built on it bring their own database and cache dependencies.
 
 ## Code style
 
