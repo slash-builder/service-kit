@@ -8,6 +8,19 @@ adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+## [0.1.1](https://github.com/slash-builder/service-kit/compare/v0.1.0...v0.1.1) - 2026-11-23
+
+### Fixed
+
+- *(deps)* update url to 2.5.9 (RUSTSEC-2026-0592) ([#13](https://github.com/slash-builder/service-kit/pull/13))
+
+### Other
+
+- *(deps)* Bump tokio from 1.53.3 to 1.54.1 ([#7](https://github.com/slash-builder/service-kit/pull/7))
+- raise the minimum supported Rust version to 1.85 ([#12](https://github.com/slash-builder/service-kit/pull/12))
+- document the public API; forbid unsafe code outside tests ([#10](https://github.com/slash-builder/service-kit/pull/10))
+- *(deps)* Bump reqwest from 0.12.28 to 0.13.5 ([#3](https://github.com/slash-builder/service-kit/pull/3))
+
 ### Added
 
 - First public release as the `slashbuilder-service-kit` package. The library
