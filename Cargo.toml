@@ -20,7 +20,7 @@ name = "service_kit"
 path = "src/lib.rs"
 
 [dependencies]
-axum = "0.7"
+axum = "0.8"
 tower = { version = "0.4", features = ["util", "timeout"] }
 tower-http = { version = "0.5", features = ["trace", "cors", "compression-gzip", "request-id", "timeout"] }
 hyper = "1"
